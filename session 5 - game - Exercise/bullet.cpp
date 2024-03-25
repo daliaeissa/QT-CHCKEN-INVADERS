@@ -4,10 +4,12 @@
 #include <QList>
 #include <enemy.h>
 #include <player.h>
-Bullet::Bullet():QObject(), QGraphicsRectItem() {
+Bullet::Bullet():QObject(), QGraphicsPixmapItem() {
 
         // *******  Setting the bullets' size ********
-    setRect(0,0,10,50);
+    //setRect(0,0,10,50);
+        QPixmap bullet("C:/Users/dalia/Desktop/Spring 2024 semester/CS2 lab/Assignments/Assignment 2 QT CHICKEN INVADERS/Session 05 Game Template (2)/Session 05 Game Template/laser.png");
+        setPixmap(bullet.scaled(100, 100));
 
         // *******  Generating the Bullets automatically ********
     QTimer * timer = new QTimer();
@@ -36,7 +38,7 @@ void Bullet:: move()
         // *******  Moving the bullets upward ********
 
     setPos(x(),y()-10);
-    if(pos().y()+rect().height()<0){
+    if(pos().y()+100<0){
         scene()->removeItem(this);
         delete this;
     }
