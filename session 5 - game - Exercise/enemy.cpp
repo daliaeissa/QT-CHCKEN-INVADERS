@@ -5,11 +5,14 @@
 #include <QDebug>
 #include "player.h"
 #include "gameover.h"
+#include <QPixmap>
 
 
 Enemy::Enemy() {
         // *******  Setting the size of the enemy ********
-    setRect(0,0,100,100);
+    //setRect(0,0,100,100);
+        QPixmap chicken("C:/Users/dalia/Desktop/Spring 2024 semester/CS2 lab/Assignments/Assignment 2 QT CHICKEN INVADERS/Session 05 Game Template (2)/Session 05 Game Template/chicken.png");
+        setPixmap(chicken.scaled(100, 100));
 
         // *******  Setting the postion of the enemy within the view dimensions ********
     int random_number = rand() % 700;
@@ -41,7 +44,7 @@ void Enemy:: move()
         }
     }
     setPos(x(),y()+5);
-    if(pos().y()+rect().height()<0)
+    if(pos().y()+100<0)
     {
         scene()->removeItem(this);
         delete this;

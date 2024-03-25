@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     // *******  Create the Player ********
     Player* player = new Player();
-    QPixmap spaceship("C:/Users/dalia/Desktop/Spring 2024 semester/CS2 lab/Assignments/Assignment 2 QT CHICKEN INVADERS/Session 05 Game Template (2)/Session 05 Game Template/spaceship.jpg");
+    QPixmap spaceship("C:/Users/dalia/Desktop/Spring 2024 semester/CS2 lab/Assignments/Assignment 2 QT CHICKEN INVADERS/Session 05 Game Template (2)/Session 05 Game Template/spaceship2.png");
     player->setPixmap(spaceship.scaled(100,100));
 
     // ******* Create the Scene ********
