@@ -37,6 +37,8 @@ int main(int argc, char *argv[])
    // *******   Assign scene to the view   ***************
     view.setScene(&scene);
 
+    view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
 
     // *******  Create the Enemies automatically ********
